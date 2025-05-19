@@ -27,14 +27,12 @@ namespace ECSEx
 
 
             var esc = false;
-            Task.Run(() => {
-                while (!esc)
-                {
-                    Thread.Sleep(500);
-                    Events.InvokeUpdate();
+            while (!esc)
+            {
+                Thread.Sleep(500);
+                Events.InvokeUpdate();
 
-                } 
-            });
+            }
         }
     }
 }
